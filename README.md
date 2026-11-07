@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.jpg" alt="Eregion logo" width="180"/>
+  <img src="assets/logo.png" alt="Eregion logo" width="420"/>
 </p>
 
 <h1 align="center">Eregion</h1>
