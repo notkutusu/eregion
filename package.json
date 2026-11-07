@@ -1,7 +1,7 @@
 {
   "name": "@notkutusu/eregion",
   "version": "0.0.0",
-  "description": "Education calculation tools from Not Kutusu",
+  "description": "Useful TypeScript tools for students.",
   "license": "MIT",
   "repository": {
     "type": "git",

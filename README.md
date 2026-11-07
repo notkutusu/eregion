@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="Eregion logo" width="180"/>
+  <img src="assets/logo.jpg" alt="Eregion logo" width="180"/>
 </p>
 
 <h1 align="center">Eregion</h1>
@@ -13,9 +13,8 @@
 </p>
 
 <p align="center">
-  Small education <strong>calculation tools</strong> from the makers of
-  <a href="https://www.notkutusu.com">Not Kutusu</a>.<br/>
-  Pure TypeScript. No UI. No API calls. No database.
+  TypeScript helpers for student calculations from the makers of
+  <a href="https://www.notkutusu.com">Not Kutusu</a>.
 </p>
 
 ---
@@ -31,7 +30,7 @@ This repository follows that idea. We forge small, reliable tools for students. 
 
 ## What is Eregion?
 
-Eregion is a public TypeScript package of **offline education helpers**.
+Eregion is a public TypeScript package of **student calculation helpers**.
 
 Typical tools (coming soon) look like:
 
@@ -44,19 +43,12 @@ Each tool should be:
 | Rule | Meaning |
 | --- | --- |
 | Pure | Same input → same output |
-| Offline | No network, no secrets, no backend |
 | Typed | Clear TypeScript types |
 | Small | Easy to read, test, and review |
 
 **Not Kutusu** ([notkutusu.com](https://www.notkutusu.com)) is a student platform for lecture notes, past exams, and instructor feedback. Our main product apps stay private. Eregion is the open workshop we share with everyone.
 
-## Status
-
-The forge is open, but **no tools are shipped yet**. This repository is a clean skeleton so we can add the first calculators next.
-
 ## Install
-
-When the first tool is published to npm:
 
 ```bash
 yarn add @notkutusu/eregion
@@ -66,22 +58,17 @@ yarn add @notkutusu/eregion
 npm install @notkutusu/eregion
 ```
 
-Until then, you can follow this repository and open issues or PRs.
-
-## Usage (preview)
-
-When tools land, usage will stay simple:
+## Usage
 
 ```ts
 import { /* toolName */ } from "@notkutusu/eregion";
 
-// Example shape only - not available yet
-// const result = toolName({ /* inputs */ });
+const result = toolName({ /* inputs */ });
 ```
 
-Use Eregion inside your own UI (React, Vue, plain HTML, anything). This package only does the math. You own the screens.
+Use Eregion inside your own UI (React, Vue, plain HTML, anything). This package does the math. You own the screens.
 
-[Not Kutusu](https://www.notkutusu.com) (our Shire web app) will consume this package the same way.
+[Not Kutusu](https://www.notkutusu.com) (our Shire web app) consumes this package the same way.
 
 ## Project layout
 
@@ -104,13 +91,6 @@ Pull requests are welcome from everyone.
 5. Merge
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) before you start.
-
-## Roadmap (short)
-
-- [ ] First student calculator tool
-- [ ] npm publish for `@notkutusu/eregion`
-- [ ] More small tools over time
-- [ ] Optional demo site later (not required)
 
 ## Related
 
