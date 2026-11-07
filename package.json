@@ -1,0 +1,47 @@
+{
+  "name": "@notkutusu/eregion",
+  "version": "0.0.0",
+  "description": "Education calculation tools from Not Kutusu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notkutusu/eregion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/notkutusu/eregion/issues"
+  },
+  "homepage": "https://github.com/notkutusu/eregion#readme",
+  "author": "Not Kutusu",
+  "keywords": [
+    "notkutusu",
+    "education",
+    "typescript",
+    "calculator",
+    "students"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "~5.6.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

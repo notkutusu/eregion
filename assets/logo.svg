@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Eregion">
+  <defs>
+    <linearGradient id="ring" x1="40" y1="40" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C9A227"/>
+      <stop offset="0.55" stop-color="#E8D48B"/>
+      <stop offset="1" stop-color="#8B6914"/>
+    </linearGradient>
+    <linearGradient id="anvil" x1="80" y1="200" x2="240" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3D4F5F"/>
+      <stop offset="1" stop-color="#1B242C"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="48" fill="#0F1A22"/>
+  <circle cx="160" cy="128" r="62" fill="none" stroke="url(#ring)" stroke-width="14"/>
+  <circle cx="160" cy="128" r="28" fill="none" stroke="#E8D48B" stroke-width="6" opacity="0.85"/>
+  <path d="M96 214h128l12 18H84l12-18z" fill="url(#anvil)"/>
+  <path d="M118 214V188h84v26" fill="#2A3742"/>
+  <path d="M148 188h24v-18h-24v18z" fill="#C9A227"/>
+  <path d="M70 248h180l-10 22H80l-10-22z" fill="#152029"/>
+</svg>
