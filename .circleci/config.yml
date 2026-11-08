@@ -1,0 +1,32 @@
+version: 2.1
+
+jobs:
+  typecheck:
+    docker:
+      - image: cimg/node:20.11
+    working_directory: ~/project
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-yarn-{{ checksum "yarn.lock" }}
+            - v1-yarn-
+      - run:
+          name: Install dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          key: v1-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+            - node_modules
+      - run:
+          name: Typecheck
+          command: yarn typecheck
+      - run:
+          name: Build
+          command: yarn build
+
+workflows:
+  build:
+    jobs:
+      - typecheck
