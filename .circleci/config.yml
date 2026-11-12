@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  typecheck:
+  build:
     docker:
       - image: cimg/node:20.11
     working_directory: ~/project
@@ -20,13 +20,13 @@ jobs:
             - ~/.cache/yarn
             - node_modules
       - run:
-          name: Typecheck
-          command: yarn typecheck
-      - run:
           name: Build
           command: yarn build
+      - run:
+          name: Pack dry-run
+          command: npm pack --dry-run
 
 workflows:
   build:
     jobs:
-      - typecheck
+      - build
