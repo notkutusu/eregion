@@ -25,8 +25,30 @@ jobs:
       - run:
           name: Pack dry-run
           command: npm pack --dry-run
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - dist
+
+  publish:
+    docker:
+      - image: cimg/node:20.11
+    working_directory: ~/project
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Publish to npm
+          command: yarn release
 
 workflows:
   build:
     jobs:
       - build
+      - publish:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
