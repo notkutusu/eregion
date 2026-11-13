@@ -5,6 +5,7 @@
 <h1 align="center">Eregion</h1>
 
 <p align="center">
+  <a href="https://dl.circleci.com/status-badge/redirect/gh/notkutusu/eregion/tree/master"><img src="https://dl.circleci.com/status-badge/img/gh/notkutusu/eregion/tree/master.svg?style=svg" alt="CircleCI"/></a>
   <a href="https://github.com/notkutusu/eregion/stargazers"><img src="https://img.shields.io/github/stars/notkutusu/eregion?style=flat-square" alt="Stars"/></a>
   <a href="https://github.com/notkutusu/eregion/issues"><img src="https://img.shields.io/github/issues/notkutusu/eregion?style=flat-square" alt="Issues"/></a>
   <a href="https://github.com/notkutusu/eregion/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs welcome"/></a>
