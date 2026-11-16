@@ -22,5 +22,6 @@ Thank you for helping at the forge. Celebrimbor would approve.
 - Use a clear title and a short description
 - One focused change per PR when possible
 - Link related issues if they exist
+- Version bumps are automatic on `master` merge. Add `[minor]` or `[major]` in a commit message when the public API needs that bump. Otherwise CI publishes a patch.
 
 Everyone is welcome to open a PR.
