@@ -148,11 +148,14 @@ function pushTag(version) {
 
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
   if (token) {
-    run("git", [
-      "push",
-      `https://x-access-token:${token}@github.com/notkutusu/eregion.git`,
-      tag,
-    ]);
+    run("git", ["push", "https://github.com/notkutusu/eregion.git", tag], {
+      env: {
+        ...process.env,
+        GIT_CONFIG_COUNT: "1",
+        GIT_CONFIG_KEY_0: "http.extraheader",
+        GIT_CONFIG_VALUE_0: `AUTHORIZATION: bearer ${token}`,
+      },
+    });
     return;
   }
 
