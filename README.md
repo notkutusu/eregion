@@ -76,10 +76,33 @@ Use Eregion inside your own UI (React, Vue, plain HTML, anything). This package 
 ```text
 eregion/
   assets/          # logo and static files
+  scripts/         # release helpers
   src/             # tool source (TypeScript)
   CONTRIBUTING.md  # how to help
   README.md        # you are here
 ```
+
+## Releases
+
+Every merge to `master` publishes a new `@notkutusu/eregion` version to npm after CI build passes.
+
+Version bump comes from commit messages since the last `v*` tag:
+
+| Marker in a commit message | Bump |
+| --- | --- |
+| `[major]` | `x.0.0` |
+| `[minor]` | `0.y.0` (x unchanged) |
+| none | patch (`z`) |
+
+Examples:
+
+- `Add final exam helper` → patch
+- `Add weighted average helper [minor]` → minor
+- `Rename public API [major]` → major
+
+If both markers appear since the last release, `[major]` wins over `[minor]`.
+
+Published versions are tagged in git as `vX.Y.Z`. The version in git `package.json` may lag; npm and git tags are the source of truth.
 
 ## Contributing
 
